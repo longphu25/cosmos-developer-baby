@@ -1,16 +1,18 @@
 name: Testnet check
 
-on: 
+on:
   push:
     branches:
       - testnet-check
+      - testnet-check-phu
   pull_request:
     branches:
       - testnet-check
+      - testnet-check-phu
 
 jobs:
   run-testnet-check:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: checkout chain source code
         uses: actions/checkout@v3
